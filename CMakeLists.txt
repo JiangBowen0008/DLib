@@ -69,6 +69,12 @@ endif(BUILD_DVision)
 
 
 if(BUILD_DUtilsCV OR BUILD_DVision)
+  # if(DEFINED ENV{OPENCV_INSTALL_DIR})
+  #     find_package(OpenCV 3.1.0 REQUIRED PATHS $ENV{OPENCV_INSTALL_DIR})
+  # else()
+  #     message("OPENCV_INSTALL_DIR not set, searching in default location(s)")
+  #     find_package(OpenCV 3.1.0 REQUIRED)
+  # endif(DEFINED ENV{OPENCV_INSTALL_DIR})
   find_package(OpenCV REQUIRED)
 endif(BUILD_DUtilsCV OR BUILD_DVision)
 
